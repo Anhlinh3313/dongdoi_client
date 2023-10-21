@@ -1,0 +1,97 @@
+.sport-table{
+    display:grid;
+    justify-content: center;
+    height: 80vh;
+    .football-navbar{
+        button{
+            border:none;
+            margin:0 2px;
+            cursor:pointer;
+            height: 30px;
+            border-radius: 2px;
+        }
+        .button-hover{
+            background: #397f19;
+            color:white;
+            border-radius: 0;
+        }
+        background-color: white;
+        padding: 10px 10px;
+        padding-bottom: 0;
+        border-radius: 8px 8px 0 0;
+    }
+    .table-data{
+        overflow-y: scroll;
+        background-color: white;
+        padding:5px
+        
+    }
+    table{
+        width: 45rem;
+        .scoretitle{
+            background-color: #397f19;
+            color: white!important;;
+        }
+        tr{
+            border-bottom: 1px solid gray;
+            text-align: center;
+            .league{
+                width: 10%;
+            }
+            .item-league{
+                color:white;
+            }
+            .time{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .home{
+                width: 20%;
+            }            
+            .score{
+                width: 7%;
+                span{
+                    color:#d64444;
+                    font-weight: 600;
+
+                }
+            }
+            .away{
+                width: 20%;
+            }
+            .odds{
+                width: 10%;
+                p{
+                    margin:0px;
+                }
+            }
+            .thg{
+                color: #da2727;
+                transform: scale(.85);
+                display: inline-block;
+            }
+            .yellow-card{
+                background-color: #fdd668;
+                color: #9c6c44;
+               
+            }
+            .red-card{
+                background-color: #d64444;
+                color: #fff;
+            }
+            .yellow-card,.red-card{
+                padding: 0 2px;
+                border-radius: 2px;
+                margin: 0 2px;
+            }
+        }
+
+    }
+    
+}
+
+#tilemotnhanhai  .ant-select-arrow {
+    transform: translate(0px, -4px);
+}

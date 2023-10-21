@@ -1,0 +1,506 @@
+.banner {
+    width: 100%;
+    position: relative;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.banner img {
+    width: 100%;
+}
+
+.grid-container {
+    max-width: 70%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 20px;
+    min-height: 200px;
+
+}
+
+.grid-item {
+    text-align: center;
+    background: url("/bg-bank-item.png") center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+    transform: translateY(-100px);
+}
+
+.grid-item img {
+    padding: 50px;
+    width: 100%;
+}
+
+.list-donate {
+    max-width: 50%;
+    margin: 0 auto;
+    min-height: 500px;
+    background: #fff;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.list-donate-home {
+    max-width: 50%;
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.marquee-container {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.separator {
+    margin-left: 30px;
+}
+
+.intro-title {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 75px;
+    margin: 0 !important;
+}
+
+.intro-line {
+    display: block;
+    width: 25%;
+    background-color: #ffdb20;
+    height: 5px;
+    margin: 0 auto;
+}
+
+
+.total-donate {
+    position: relative;
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.total-donate::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+
+.list-donate-content {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.list-donate-info {
+    border: 1px solid #ccc;
+    text-align: center;
+    overflow: hidden;
+}
+
+.donate-item {
+    align-items: center;
+}
+
+.donate-amount {
+    font-weight: bold;
+}
+
+.donate-description {
+    margin-right: 5px;
+    color: #555;
+}
+
+
+
+.footer-image {
+    position: relative;
+    width: 100%;
+}
+
+.footer-iamge-item {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-100%);
+    height: 400px;
+    width: 100%;
+}
+
+.donate-detail {
+    background: url("/bd-donate-ditail.webp");
+    padding-bottom: 50px;
+}
+
+.donate-detail-content {
+    padding: 60px 0;
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 0 30px;
+    margin: 0 auto;
+}
+
+.donate-detail-listbank-content {
+    cursor: pointer;
+    width: 300px;
+    height: 80px;
+    background: #FFFFFF;
+    border: 2px solid #FFDB20;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.donate-detail-listbank-content img {
+    height: 100%;
+}
+
+.listbank-details {
+    text-align: center;
+    width: 600px;
+    height: 100%;
+}
+
+.listbank-details h1 {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 28.75px;
+    line-height: 34px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.listbank-details-content {
+    background: #FFDB20;
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.listbank-content-item {
+    display: flex;
+    justify-content: center;
+}
+
+.listbank-item-info {
+    width: 300px;
+    margin-right: 20px;
+    font-size: 1rem;
+}
+
+.listbank-item-info h6 {
+    background: #FFFFFF;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.listbank-item-info .bank-number {
+    padding: 3px 10px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.listbank-item-info .bank-number img {
+    width: 20px;
+    height: 20px;
+}
+
+.listbank-item-info .bank-number h6 {
+    margin: 0;
+}
+
+.listbank-item-info .bank-name {
+    padding: 3px 10px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.listbank-item-info .bank-name img {
+    width: 20px;
+    height: 20px;
+}
+
+.listbank-item-info .bank-name h6 {
+    margin: 0;
+}
+
+
+.listbank-item-info h5 {
+    font-weight: 600;
+}
+
+.listbank-item-code {
+    background: #FFFFFF;
+    width: 300px;
+    border-radius: 20px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.listbank-item-code .qrCode {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.listbank-item-code h5 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.listbank-item-code button {
+    color: #FFFFFF;
+    background: #8E8E8E;
+    border-radius: 10px;
+    padding: 5px 30px;
+}
+
+.warnning {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.warnning h2 {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.warnning h5 {
+    background: #FFFFFF;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    color: #9C0000;
+    padding: 5px 0;
+}
+
+.bank-active {
+    background-color: #FFDB20 !important;
+}
+
+.pagination {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 999;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    color: #000000;
+    background-color: #F2F2F2;
+    border: 1px solid #dee2e6;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.page-link-button {
+    color: #000000;
+    background-color: #FFDB20;
+    border: 1px solid #FFDB20;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+
+.page-link:hover {
+    color: #000000;
+    text-decoration: none;
+    background-color: #FFDB20;
+    border-color: #FFDB20;
+}
+
+.page-item-active .page-link {
+    z-index: 1;
+    background-color: #FFDB20;
+    border-color: #FFDB20;
+}
+
+.page-item-disabled .page-link {
+    color: #000000;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .grid-item {
+        width: 200px;
+        height: 200px;
+    }
+
+
+    .donate-detail-content {
+        max-width: 90%;
+    }
+
+    .listbank-details h1 {
+        font-size: 20px;
+    }
+
+    .listbank-details {
+        width: 500px;
+    }
+
+    .listbank-item-code {
+        width: 200px;
+        padding: 20px 5px;
+    }
+
+    .donate-detail-listbank-content {
+        width: 200px;
+        height: 60px;
+    }
+
+    .donate-detail-listbank-content svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .list-donate {
+        max-width: 100%;
+    }
+
+    .intro-title {
+        line-height: 1.5;
+    }
+
+    .intro-line {
+        width: 70%;
+    }
+
+    .grid-item {
+        width: 100px;
+        height: 100px;
+    }
+
+    .grid-item img {
+        padding: 20px;
+    }
+
+    .donate-detail-content {
+        max-width: 100%;
+    }
+
+    .listbank-details h1 {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .listbank-details {
+        width: 250px;
+    }
+
+    .listbank-item-info {
+        width: 100%;
+        margin: 0;
+    }
+
+    .listbank-item-code {
+        width: 100%;
+        padding: 20px 5px;
+    }
+
+    .donate-detail-listbank-content {
+        width: 120px;
+        height: 40px;
+    }
+
+    .donate-detail-listbank-content svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .donate-detail-content {
+        gap: 0 10px;
+    }
+
+    .listbank-content-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .listbank-details-content {
+        padding: 20px 10px;
+    }
+
+
+    .warnning h2 {
+        font-weight: 900;
+        font-size: 20px;
+    }
+
+    .warnning h5 {
+        font-size: 15px;
+        line-height: 34px;
+    }
+
+    .footer-iamge-item img {
+        width: 150px;
+    }
+}

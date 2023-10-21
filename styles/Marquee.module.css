@@ -1,0 +1,5 @@
+.marquee {
+    height: 200px;
+    /* Đặt chiều cao của marquee */
+    overflow: hidden;
+}

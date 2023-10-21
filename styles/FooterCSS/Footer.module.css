@@ -1,0 +1,138 @@
+.footer{
+  width: 100%;
+  margin: 15pc auto 0px;
+  color: rgb(128, 128, 128);
+}
+.footer-container{
+  padding: 10px 100px;
+}
+.footer-row-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-column-container-left{
+  padding-right: 100px;
+}
+.merchant-logo{
+  width: 135px;
+}
+.footer-column-container-right{
+}
+
+.footer-list-container{
+  display: flex;
+  justify-content: flex-end;
+}
+.list-item-icon{
+  float: left;
+  text-transform: uppercase;
+  font-size: 0.12rem;
+}
+.list-item-text-cursor{
+  float: left;
+  text-transform: initial;
+  font-size: 12px;
+  padding: 0px 10px 0px 0px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.list-item-text{
+  float: left;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 0px 10px 0px 0px;
+  cursor: pointer;
+}
+.footer-column-container{
+  height: 16px;
+  border-bottom: 1px solid rgb(191, 191, 191);
+  width: 100%;
+  margin: 16px 0px;
+}
+.footer-custom{
+  margin: 0px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.footer-list-container-item{
+  padding-left: 0px 20px;
+}
+.custom{
+  width: 75px;
+  margin: 18px 0px 15px;
+}
+.list-item-title{
+  color: rgb(2, 169, 220);
+  font-size: 24px;
+  font-weight: 600;
+}
+.list-item-dependenci{
+  height: 48px;
+  font-size: 10px;
+  line-height: 15px;
+  margin: 9px 0px 3px;
+  padding: 0px 25px;
+}
+.list-item-add{
+  cursor: pointer;
+}
+.footer-row-5{
+  display: flex;
+  justify-content: center;
+}
+.footer-follow-us{
+  width: 30%;
+}
+.fcol-title{
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 1px;
+}
+.footer-list-container-logo{
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-item-youtobe{
+  height: 42px;
+  padding: 0px 1px 0.1px 0px;
+  cursor: pointer;
+}
+
+.list-item-fb{
+  height: 42px;
+  padding: 0px 1px 0.1px 0px;
+  cursor: pointer;
+}
+.follow-us{
+  height: 100%;
+  border-radius: 6px;
+  vertical-align: middle;
+  border-style: none;
+}
+.license-by{
+  width: auto;
+  height: 42px;
+  border-radius: 9px;
+  padding: 0px 1px 1px 0px;
+}
+.list-item-icon-show{
+  height: 42px;
+  padding: 0px 1px 0.1px 0px;
+  cursor: pointer;
+}
+.footer-provide{
+    text-align: center;
+}
+.footer-list-icon-show{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+.provider{
+  height: 42px;
+  padding: 0px 1px 1px 0px;
+  margin: 0px;
+}
