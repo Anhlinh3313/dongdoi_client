@@ -16,12 +16,9 @@ const nextConfig = {
     },
   },
   env: {
-    NEXT_PUBLIC_API_DOMAIN: "https://api.thethao789.com",
-    // NEXT_PUBLIC_API_DOMAIN: "https://api.dongdoi.com/",
+    NEXT_PUBLIC_API_DOMAIN: "https://api.dongdoi.com/",
     NEXT_PUBLIC_SCHEMA_NAME: "dongdoi",
     NEXT_PUBLIC_SCHEMA_URL: "https://dongdoi.com",
-    NEXT_PUBLIC_SCHEMA_LOGO: "https://thethao789.b-cdn.net/logo-thethao789.png",
-    NEXT_PUBLIC_BUNNY_URL: "https://thethao789.b-cdn.net",
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if

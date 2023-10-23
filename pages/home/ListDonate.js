@@ -3,6 +3,7 @@ import axios from "axios";
 import Marquee from 'react-fast-marquee';
 import styles from "../../styles/Donate.module.css";
 import { API_URL } from "../../app/@function/wsCode";
+import { socket } from "../../stores/socket";
 
 function ListDonate() {
     const [listDonate, setListDonate] = useState([]);
@@ -17,7 +18,25 @@ function ListDonate() {
                 console.error('Error fetching data:', error);
             }
         };
+
+        const fetchSocket = () => {
+            try {
+                socket.connect();
+                socket.on("connect");
+                socket.emit("call_transaction", true);
+                socket.on("transactions", (data) => {
+                    if(data){
+                        setListDonate(data);
+                    }
+                });
+            } catch (error){
+                console.error('Error fetching data socket:', error);
+            }
+            
+        }
+
         fetchDataDonate();
+        fetchSocket();
     }, []);
 
     const formatter = new Intl.NumberFormat('vi-VN', {
@@ -34,7 +53,8 @@ function ListDonate() {
 
             // Nếu không tìm thấy từ "chuyen tien" trong chuỗi
             if (startIndex === -1) {
-                return { ...donate, name: "Noname***" };
+                // return { ...donate, name: "Noname***" };
+                return { ...donate, name: content.slice(0, 15) + "***" };
             }
 
             // Lấy chuỗi trước từ "chuyen tien"

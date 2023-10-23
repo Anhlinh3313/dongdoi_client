@@ -20,7 +20,6 @@ function Donate() {
                 ]);
 
                 setListBank(bankResponse?.data);
-
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -37,7 +36,6 @@ function Donate() {
             setInitialBankSet(true);
         }
     }, [bank, listBank, initialBankSet]);
-
 
     return (
         <>

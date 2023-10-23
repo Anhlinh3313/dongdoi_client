@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "../../../styles/Donate.module.css"
 import { API_URL } from "../../@function/wsCode"
 import axios from "axios";
 import Marquee from './Marquee';
+import { socket } from "../../../stores/socket";
 
 function ListDonate() {
     const [totalDonate, setTotalDonate] = useState("");
@@ -26,8 +27,26 @@ function ListDonate() {
             }
         }
 
+        const fetchSocket = () => {
+            try {
+                socket.connect();
+                socket.on("connect");
+                socket.emit("call_transaction", true);
+                socket.on("transactions", (data) => {
+                    if (data) {
+                        setListDonate(data);
+                        fetchData();
+                    }
+                });
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+
+        }
+
         fetchDataDonate();
         fetchData();
+        fetchSocket();
     }, []);
 
 
@@ -76,7 +95,7 @@ function ListDonate() {
                 Dongdoi.com trân thành cảm ơn các mạnh thường quân đã ủng hộ quỹ từ thiện !!!</h2>
 
             <div className={styles['list-donate-info']}>
-                <Marquee>
+                {/* <Marquee> */}
                     {listDonateWithNames?.map((donate) => (
                         <div key={donate._id} className={styles['list-donate-content']}>
                             <div className={styles['donate-item']}>
@@ -85,7 +104,7 @@ function ListDonate() {
                             </div>
                         </div>
                     ))}
-                </Marquee>
+                {/* </Marquee> */}
 
             </div>
         </div>

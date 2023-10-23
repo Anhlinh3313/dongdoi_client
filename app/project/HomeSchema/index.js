@@ -11,11 +11,11 @@ const HomeSchema = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios
-      .get(`${process.env.NEXT_PUBLIC_API_DOMAIN}/api/schema/getByPage/home`)
-      .then((data) => {
-        setSchema(data.data);
-      });
+    // axios
+    //   .get(`${process.env.NEXT_PUBLIC_API_DOMAIN}/api/schema/getByPage/home`)
+    //   .then((data) => {
+    //     setSchema(data.data);
+    //   });
   }, []);
 
   // useEffect(() => {

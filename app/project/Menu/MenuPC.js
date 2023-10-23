@@ -9,6 +9,7 @@ import stylesCss from "../../../styles/MenuCSS/Menu.module.css";
 import { API_URL } from "@function/wsCode";
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import { socket } from "stores/socket";
 
 const MenuPC = () => {
   const [menuScroll, setMenuScroll] = useState(false);
@@ -41,7 +42,23 @@ const MenuPC = () => {
       }
     };
 
+    const fetchSocket = () => {
+      try {
+        socket.connect();
+        socket.on("connect");
+        socket.emit("call_transaction", true);
+        socket.on("transactions", (data) => {
+          if (data) {
+            fetchDataDonate();
+          }
+        });
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
     fetchDataDonate();
+    fetchSocket();
   }, [])
 
   useEffect(() => {
